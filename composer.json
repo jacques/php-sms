@@ -1,0 +1,33 @@
+{
+    "name": "jacques/php-sms",
+    "description": "SMS Wrappers for various service providers extracted from Hydra and modernised to use GuzzleHttp\\Client",
+    "keywords": [
+        "sms", "kannel", "smsportal", "messagehub", "panaceamobile", "clickatell"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Jacques Marneweck",
+            "email": "jacques@powertrip.co.za"
+        }
+    ],
+    "require": {
+        "php": ">=5.5.0",
+        "guzzlehttp/guzzle": "^6.1"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~4.1",
+        "mockery/mockery": "~0.9",
+        "php-vcr/php-vcr": "*",
+        "php-vcr/phpunit-testlistener-vcr": "^1.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Jacques\\SMS\\": "src/"
+        }
+    },
+    "scripts": {
+        "test": "phpunit --debug --verbose --configuration=tests/phpunit.xml",
+        "phpcs": "phpcs --standard=PSR2 ./src"
+    }
+}
