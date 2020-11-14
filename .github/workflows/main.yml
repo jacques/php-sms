@@ -1,0 +1,17 @@
+name: CI
+
+on: [push, pull_request]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+ 
+    steps:
+    - uses: actions/checkout@v1
+    - name: use https instead of http
+      run: git config --global url.https://github.com/.insteadOf ssh://git@github.com/
+    - name: composer install
+      run: composer install --prefer-dist
+    - name: composer test
+      run: composer test
