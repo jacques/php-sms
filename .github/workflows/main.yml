@@ -12,6 +12,6 @@ jobs:
     - name: use https instead of http
       run: git config --global url.https://github.com/.insteadOf ssh://git@github.com/
     - name: composer install
-      run: composer install --prefer-dist
+      run: composer install --prefer-dist --no-progress --no-suggest
     - name: composer test
       run: composer test
