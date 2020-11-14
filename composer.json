@@ -44,6 +44,11 @@
             "Jacques\\SMS\\": "src/"
         }
     },
+    "autoload-dev": {
+        "psr-4": {
+            "Jacques\\SMS\\Tests\\": "tests/"
+        }
+    },
     "scripts": {
         "phpcs": "phpcs --standard=PSR2 ./src",
         "test": "phpunit --debug --verbose --configuration=tests/phpunit.xml"
