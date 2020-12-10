@@ -1,4 +1,6 @@
-<?php declare(strict_types=1);
+<?php
+
+declare(strict_types=1);
 /**
  * @author    Jacques Marneweck <jacques@siberia.co.za>
  * @copyright 2020 Jacques Marneweck.  All rights strictly reserved.
@@ -48,7 +50,6 @@ class ClickatellTest extends TestCase
         $clickatell = new Clickatell(['username' => 'username', 'password' => 'Sw0rdf1sh', 'api_id' => 1_234_567]);
         self::assertNull($clickatell->setDeliveryAck(true));
     }
-
 
     public function testSetSessionId(): void
     {

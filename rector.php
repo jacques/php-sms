@@ -13,7 +13,7 @@ return static function (ContainerConfigurator $containerConfigurator): void {
 
     // Define what rule sets will be applied
     $parameters->set(Option::SETS, [
-        #SetList::DEAD_CODE,
+        //SetList::DEAD_CODE,
         SetList::CODE_QUALITY,
         SetList::CODING_STYLE,
         SetList::PERFORMANCE,
