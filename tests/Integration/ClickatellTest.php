@@ -1,4 +1,6 @@
-<?php declare(strict_types=1);
+<?php
+
+declare(strict_types=1);
 /**
  * @author    Jacques Marneweck <jacques@siberia.co.za>
  * @copyright 2020 Jacques Marneweck.  All rights strictly reserved.
@@ -193,5 +195,4 @@ class ClickatellTest extends TestCase
 
         self::assertEquals([false, false], $clickatell->send_message(['to' => '27801234567', 'message' => 'testing']));
     }
-
 }
