@@ -15,3 +15,5 @@ jobs:
       run: composer install --prefer-dist --no-progress --no-suggest
     - name: composer test
       run: composer test
+    - name: upload code coverage
+      run: bash <(curl -s https://codecov.io/bash)
