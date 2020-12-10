@@ -1,0 +1,125 @@
+
+-
+    request:
+        method: POST
+        url: 'https://api.clickatell.com/http/auth'
+        headers:
+            Host: api.clickatell.com
+            Expect: ''
+            Accept-Encoding: ''
+            User-Agent: 'php-sms/0.7 GuzzleHttp/7'
+            Content-Type: application/x-www-form-urlencoded
+            Accept: ''
+        body: 'user=username&password=sw0rdf1sh&api_id=1234567'
+    response:
+        status:
+            http_version: '1.1'
+            code: '200'
+            message: OK
+        headers:
+            Date: 'Tue, 08 Dec 2020 21:32:22 GMT'
+            Server: Apache
+            Access-Control-Allow-Origin: '*'
+            Content-Length: '36'
+            Content-Type: 'text/html; charset=UTF-8'
+        body: 'OK: abcdef1234567890abcdef1234567890'
+        curl_info:
+            url: 'https://api.clickatell.com/http/auth'
+            content_type: 'text/html; charset=UTF-8'
+            http_code: 200
+            header_size: 164
+            request_size: 213
+            filetime: -1
+            ssl_verify_result: 0
+            redirect_count: 0
+            total_time: 1.159316
+            namelookup_time: 0.219162
+            connect_time: 0.449819
+            pretransfer_time: 0.929319
+            size_upload: !!float 52
+            size_download: !!float 36
+            speed_download: !!float 31
+            speed_upload: !!float 44
+            download_content_length: !!float 36
+            upload_content_length: !!float 52
+            starttransfer_time: 1.159216
+            redirect_time: !!float 0
+            redirect_url: ''
+            primary_ip: 52.50.250.185
+            certinfo: {  }
+            primary_port: 443
+            local_ip: 10.10.10.10
+            local_port: 57969
+            http_version: 2
+            protocol: 2
+            ssl_verifyresult: 0
+            scheme: HTTPS
+            appconnect_time_us: 929264
+            connect_time_us: 449819
+            namelookup_time_us: 219162
+            pretransfer_time_us: 929319
+            redirect_time_us: 0
+            starttransfer_time_us: 1159216
+            total_time_us: 1159316
+-
+    request:
+        method: POST
+        url: 'https://api.clickatell.com/http/getbalance'
+        headers:
+            Host: api.clickatell.com
+            Expect: ''
+            Accept-Encoding: ''
+            User-Agent: 'php-sms/0.7 GuzzleHttp/7'
+            Content-Type: application/x-www-form-urlencoded
+            Accept: ''
+        body: session_id=abcdef1234567890abcdef1234567890
+    response:
+        status:
+            http_version: '1.1'
+            code: '200'
+            message: OK
+        headers:
+            Date: 'Tue, 08 Dec 2020 21:32:23 GMT'
+            Server: Apache
+            Access-Control-Allow-Origin: '*'
+            Content-Length: '17'
+            Content-Type: 'text/html; charset=UTF-8'
+        body: 'Credit: 12.000'
+        curl_info:
+            url: 'https://api.clickatell.com/http/getbalance'
+            content_type: 'text/html; charset=UTF-8'
+            http_code: 200
+            header_size: 164
+            request_size: 210
+            filetime: -1
+            ssl_verify_result: 0
+            redirect_count: 0
+            total_time: 0.952428
+            namelookup_time: 0.052452
+            connect_time: 0.252009
+            pretransfer_time: 0.691541
+            size_upload: !!float 43
+            size_download: !!float 17
+            speed_download: !!float 17
+            speed_upload: !!float 45
+            download_content_length: !!float 17
+            upload_content_length: !!float 43
+            starttransfer_time: 0.952352
+            redirect_time: !!float 0
+            redirect_url: ''
+            primary_ip: 52.19.140.201
+            certinfo: {  }
+            primary_port: 443
+            local_ip: 10.10.10.10
+            local_port: 57970
+            http_version: 2
+            protocol: 2
+            ssl_verifyresult: 0
+            scheme: HTTPS
+            appconnect_time_us: 691475
+            connect_time_us: 252009
+            namelookup_time_us: 52452
+            pretransfer_time_us: 691541
+            redirect_time_us: 0
+            starttransfer_time_us: 952352
+            total_time_us: 952428

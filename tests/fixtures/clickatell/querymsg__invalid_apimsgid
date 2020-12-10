@@ -1,0 +1,125 @@
+
+-
+    request:
+        method: POST
+        url: 'https://api.clickatell.com/http/auth'
+        headers:
+            Host: api.clickatell.com
+            Expect: ''
+            Accept-Encoding: ''
+            User-Agent: 'php-sms/0.7 GuzzleHttp/7'
+            Content-Type: application/x-www-form-urlencoded
+            Accept: ''
+        body: 'user=username&password=sw0rdf1sh&api_id=1234567'
+    response:
+        status:
+            http_version: '1.1'
+            code: '200'
+            message: OK
+        headers:
+            Date: 'Thu, 10 Dec 2020 06:26:26 GMT'
+            Server: Apache
+            Access-Control-Allow-Origin: '*'
+            Content-Length: '36'
+            Content-Type: 'text/html; charset=UTF-8'
+        body: 'OK: abcdef1234567890abcdef1234567890'
+        curl_info:
+            url: 'https://api.clickatell.com/http/auth'
+            content_type: 'text/html; charset=UTF-8'
+            http_code: 200
+            header_size: 164
+            request_size: 213
+            filetime: -1
+            ssl_verify_result: 0
+            redirect_count: 0
+            total_time: 1.907018
+            namelookup_time: 0.233266
+            connect_time: 0.406134
+            pretransfer_time: 0.804433
+            size_upload: !!float 52
+            size_download: !!float 36
+            speed_download: !!float 18
+            speed_upload: !!float 27
+            download_content_length: !!float 36
+            upload_content_length: !!float 52
+            starttransfer_time: 1.906922
+            redirect_time: !!float 0
+            redirect_url: ''
+            primary_ip: 52.50.250.185
+            certinfo: {  }
+            primary_port: 443
+            local_ip: 10.10.10.10
+            local_port: 51990
+            http_version: 2
+            protocol: 2
+            ssl_verifyresult: 0
+            scheme: HTTPS
+            appconnect_time_us: 804374
+            connect_time_us: 406134
+            namelookup_time_us: 233266
+            pretransfer_time_us: 804433
+            redirect_time_us: 0
+            starttransfer_time_us: 1906922
+            total_time_us: 1907018
+-
+    request:
+        method: POST
+        url: 'https://api.clickatell.com/http/querymsg'
+        headers:
+            Host: api.clickatell.com
+            Expect: ''
+            Accept-Encoding: ''
+            User-Agent: 'php-sms/0.7 GuzzleHttp/7'
+            Content-Type: application/x-www-form-urlencoded
+            Accept: ''
+        body: 'session_id=abcdef1234567890abcdef1234567890&apimsgid=abcdef1234567890abcdef1234567890'
+    response:
+        status:
+            http_version: '1.1'
+            code: '200'
+            message: OK
+        headers:
+            Date: 'Thu, 10 Dec 2020 06:26:31 GMT'
+            Server: Apache
+            Access-Control-Allow-Origin: '*'
+            Content-Length: '48'
+            Content-Type: 'text/html; charset=UTF-8'
+        body: 'ID: abcdef1234567890abcdef1234567890 Status: 001'
+        curl_info:
+            url: 'https://api.clickatell.com/http/querymsg'
+            content_type: 'text/html; charset=UTF-8'
+            http_code: 200
+            header_size: 164
+            request_size: 250
+            filetime: -1
+            ssl_verify_result: 0
+            redirect_count: 0
+            total_time: 4.973269
+            namelookup_time: 1.443498
+            connect_time: 1.621471
+            pretransfer_time: 4.74923
+            size_upload: !!float 85
+            size_download: !!float 48
+            speed_download: !!float 9
+            speed_upload: !!float 17
+            download_content_length: !!float 48
+            upload_content_length: !!float 85
+            starttransfer_time: 4.973208
+            redirect_time: !!float 0
+            redirect_url: ''
+            primary_ip: 52.50.250.185
+            certinfo: {  }
+            primary_port: 443
+            local_ip: 10.10.10.10
+            local_port: 51991
+            http_version: 2
+            protocol: 2
+            ssl_verifyresult: 0
+            scheme: HTTPS
+            appconnect_time_us: 4749155
+            connect_time_us: 1621471
+            namelookup_time_us: 1443498
+            pretransfer_time_us: 4749230
+            redirect_time_us: 0
+            starttransfer_time_us: 4973208
+            total_time_us: 4973269

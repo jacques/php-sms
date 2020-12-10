@@ -1,0 +1,63 @@
+
+-
+    request:
+        method: POST
+        url: 'https://api.clickatell.com/http/auth'
+        headers:
+            Host: api.clickatell.com
+            Expect: ''
+            Accept-Encoding: ''
+            User-Agent: 'php-sms/0.7 GuzzleHttp/7'
+            Content-Type: application/x-www-form-urlencoded
+            Accept: ''
+        body: 'user=username&password=sw0rdf1sh&api_id=1234567'
+    response:
+        status:
+            http_version: '1.1'
+            code: '200'
+            message: OK
+        headers:
+            Date: 'Wed, 09 Dec 2020 21:05:07 GMT'
+            Server: Apache
+            Access-Control-Allow-Origin: '*'
+            Content-Length: '36'
+            Content-Type: 'text/html; charset=UTF-8'
+        body: 'OK: abcdef1234567890abcdef1234567890'
+        curl_info:
+            url: 'https://api.clickatell.com/http/auth'
+            content_type: 'text/html; charset=UTF-8'
+            http_code: 200
+            header_size: 164
+            request_size: 213
+            filetime: -1
+            ssl_verify_result: 0
+            redirect_count: 0
+            total_time: 0.858115
+            namelookup_time: 0.071919
+            connect_time: 0.244713
+            pretransfer_time: 0.660074
+            size_upload: !!float 52
+            size_download: !!float 36
+            speed_download: !!float 41
+            speed_upload: !!float 60
+            download_content_length: !!float 36
+            upload_content_length: !!float 52
+            starttransfer_time: 0.858039
+            redirect_time: !!float 0
+            redirect_url: ''
+            primary_ip: 52.50.250.185
+            certinfo: {  }
+            primary_port: 443
+            local_ip: 10.10.10.10
+            local_port: 63233
+            http_version: 2
+            protocol: 2
+            ssl_verifyresult: 0
+            scheme: HTTPS
+            appconnect_time_us: 659918
+            connect_time_us: 244713
+            namelookup_time_us: 71919
+            pretransfer_time_us: 660074
+            redirect_time_us: 0
+            starttransfer_time_us: 858039
+            total_time_us: 858115

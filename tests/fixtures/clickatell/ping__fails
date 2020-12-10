@@ -1,0 +1,62 @@
+
+-
+    request:
+        method: POST
+        url: 'https://api.clickatell.com/http/ping'
+        headers:
+            Host: api.clickatell.com
+            Content-Length: '0'
+            Accept-Encoding: ''
+            User-Agent: 'php-sms/0.7 GuzzleHttp/7'
+            Content-Type: application/x-www-form-urlencoded
+            Accept: ''
+    response:
+        status:
+            http_version: '1.1'
+            code: '200'
+            message: OK
+        headers:
+            Date: 'Wed, 09 Dec 2020 21:05:11 GMT'
+            Server: Apache
+            Access-Control-Allow-Origin: '*'
+            Content-Length: '31'
+            Content-Type: 'text/html; charset=UTF-8'
+        body: 'ERR: 001, Authentication failed'
+        curl_info:
+            url: 'https://api.clickatell.com/http/ping'
+            content_type: 'text/html; charset=UTF-8'
+            http_code: 200
+            header_size: 164
+            request_size: 160
+            filetime: -1
+            ssl_verify_result: 0
+            redirect_count: 0
+            total_time: 1.294964
+            namelookup_time: 0.30026
+            connect_time: 0.58255
+            pretransfer_time: 1.0947
+            size_upload: !!float 0
+            size_download: !!float 31
+            speed_download: !!float 23
+            speed_upload: !!float 0
+            download_content_length: !!float 31
+            upload_content_length: !!float -1
+            starttransfer_time: 1.294904
+            redirect_time: !!float 0
+            redirect_url: ''
+            primary_ip: 52.17.236.127
+            certinfo: {  }
+            primary_port: 443
+            local_ip: 10.10.10.10
+            local_port: 63237
+            http_version: 2
+            protocol: 2
+            ssl_verifyresult: 0
+            scheme: HTTPS
+            appconnect_time_us: 1094666
+            connect_time_us: 582550
+            namelookup_time_us: 300260
+            pretransfer_time_us: 1094700
+            redirect_time_us: 0
+            starttransfer_time_us: 1294904
+            total_time_us: 1294964
