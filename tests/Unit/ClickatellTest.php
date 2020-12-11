@@ -45,6 +45,15 @@ class ClickatellTest extends TestCase
         $clickatell = new Clickatell(['username' => 'username', 'password' => 'Sw0rdf1sh']);
     }
 
+    public function testGetMessageChargeInvalidApiMsgId(): void
+    {
+        self::expectException(\InvalidArgumentException::class);
+        self::expectExceptionMessage('Invalid API Message Id.');
+
+        $clickatell = new Clickatell(['username' => 'username', 'password' => 'Sw0rdf1sh', 'api_id' => 1_234_567]);
+        $clickatell->get_message_charge('invalidapimsgid');
+    }
+
     public function testSetDeliveryAckTrue(): void
     {
         $clickatell = new Clickatell(['username' => 'username', 'password' => 'Sw0rdf1sh', 'api_id' => 1_234_567]);
@@ -73,5 +82,14 @@ class ClickatellTest extends TestCase
 
         $clickatell = new Clickatell(['username' => 'username', 'password' => 'Sw0rdf1sh', 'api_id' => 1_234_567]);
         $response = $clickatell->send_message(['to' => '27725671567']);
+    }
+
+    public function testSendMessageInvalidMessageTypeParameter(): void
+    {
+        self::expectException(\InvalidArgumentException::class);
+        self::expectExceptionMessage("Invalid message type. Message Type is 'WHATSAPP'.");
+
+        $clickatell = new Clickatell(['username' => 'username', 'password' => 'Sw0rdf1sh', 'api_id' => 1_234_567]);
+        $response = $clickatell->send_message(['to' => '27725671567', 'message' => 'testing', 'msg_type' => 'WHATSAPP']);
     }
 }

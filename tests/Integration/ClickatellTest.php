@@ -16,7 +16,7 @@ class ClickatellTest extends TestCase
     /**
      * @vcr clickatell/auth
      */
-    public function testAuth()
+    public function testAuth(): void
     {
         $clickatell = new Clickatell(['username' => 'username', 'password' => 'sw0rdf1sh', 'api_id' => 1_234_567]);
 
@@ -26,7 +26,7 @@ class ClickatellTest extends TestCase
     /**
      * @vcr clickatell/auth__fails
      */
-    public function testAuthFails()
+    public function testAuthFails(): void
     {
         $clickatell = new Clickatell(['username' => 'test', 'password' => 'test', 'api_id' => 1]);
 
@@ -36,7 +36,7 @@ class ClickatellTest extends TestCase
     /**
      * @vcr clickatell/getbalance
      */
-    public function testBalance()
+    public function testBalance(): void
     {
         $clickatell = new Clickatell(['username' => 'username', 'password' => 'sw0rdf1sh', 'api_id' => 1_234_567]);
 
@@ -47,7 +47,7 @@ class ClickatellTest extends TestCase
     /**
      * @vcr clickatell/getbalance__noauth
      */
-    public function testBalanceNoAuth()
+    public function testBalanceNoAuth(): void
     {
         $clickatell = new Clickatell(['username' => 'username', 'password' => 'sw0rdf1sh', 'api_id' => 1_234_567]);
 
@@ -81,7 +81,7 @@ class ClickatellTest extends TestCase
     /**
      * @vcr clickatell/getbalance__fails
      */
-    public function testBalanceFails()
+    public function testBalanceFails(): void
     {
         $clickatell = new Clickatell(['username' => 'test', 'password' => 'test', 'api_id' => 1]);
 
@@ -94,7 +94,7 @@ class ClickatellTest extends TestCase
     /**
      * @vcr clickatell/ping
      */
-    public function testPing()
+    public function testPing(): void
     {
         $clickatell = new Clickatell(['username' => 'username', 'password' => 'sw0rdf1sh', 'api_id' => 1_234_567]);
 
@@ -105,7 +105,7 @@ class ClickatellTest extends TestCase
     /**
      * @vcr clickatell/ping__fails
      */
-    public function testPingFails()
+    public function testPingFails(): void
     {
         $clickatell = new Clickatell(['username' => 'test', 'password' => 'test', 'api_id' => 1]);
 
@@ -115,7 +115,7 @@ class ClickatellTest extends TestCase
     /**
      * @vcr clickatell/ping__setsessionid__noauth
      */
-    public function testPingValidSession()
+    public function testPingValidSession(): void
     {
         $clickatell = new Clickatell(['username' => 'test', 'password' => 'test', 'api_id' => 1]);
 
@@ -126,7 +126,7 @@ class ClickatellTest extends TestCase
     /**
      * @vcr clickatell/ping__setsessionid__noauth__fails__stale_session
      */
-    public function testPingStaleSession()
+    public function testPingStaleSession(): void
     {
         $clickatell = new Clickatell(['username' => 'test', 'password' => 'test', 'api_id' => 1]);
 
@@ -137,7 +137,7 @@ class ClickatellTest extends TestCase
     /**
      * @vcr clickatell/querymsg__invalid_apimsgid
      */
-    public function testQueryMessageInvalidApiMsgId()
+    public function testQueryMessageInvalidApiMsgId(): void
     {
         $clickatell = new Clickatell(['username' => 'username', 'password' => 'sw0rdf1sh', 'api_id' => 1_234_567]);
 
@@ -148,7 +148,7 @@ class ClickatellTest extends TestCase
     /**
      * @vcr clickatell/routecoverage
      */
-    public function testRouteCoverage()
+    public function testRouteCoverage(): void
     {
         $clickatell = new Clickatell(['username' => 'test', 'password' => 'test', 'api_id' => 1]);
 
@@ -159,7 +159,7 @@ class ClickatellTest extends TestCase
     /**
      * @vcr clickatell/routecoverage__notroutable
      */
-    public function testRouteCoverageNotRoutable()
+    public function testRouteCoverageNotRoutable(): void
     {
         $clickatell = new Clickatell(['username' => 'username', 'password' => 'sw0rdf1sh', 'api_id' => 1_234_567]);
 
@@ -173,7 +173,7 @@ class ClickatellTest extends TestCase
     /**
      * @vcr clickatell/routecoverage__fails
      */
-    public function testRouteCoverageFails()
+    public function testRouteCoverageFails(): void
     {
         $clickatell = new Clickatell(['username' => 'test', 'password' => 'test', 'api_id' => 1]);
 
@@ -186,7 +186,7 @@ class ClickatellTest extends TestCase
     /**
      * @vcr clickatell/sendmsg__fails
      */
-    public function testSendMessageFails()
+    public function testSendMessageFails(): void
     {
         $clickatell = new Clickatell(['username' => 'test', 'password' => 'test', 'api_id' => 1]);
 
