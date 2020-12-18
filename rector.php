@@ -13,9 +13,10 @@ return static function (ContainerConfigurator $containerConfigurator): void {
 
     // Define what rule sets will be applied
     $parameters->set(Option::SETS, [
-        //SetList::DEAD_CODE,
         SetList::CODE_QUALITY,
+        SetList::CODE_QUALITY_STRICT,
         SetList::CODING_STYLE,
+        //SetList::DEAD_CODE,
         SetList::PERFORMANCE,
         SetList::PHP_70,
         SetList::PHP_71,
