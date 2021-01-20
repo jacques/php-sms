@@ -1,6 +1,6 @@
 <?php
 /**
- * PHP SMS
+ * PHP SMS.
  *
  * @author    Jacques Marneweck <jacques@siberia.co.za>
  * @copyright 2020-2021 Jacques Marneweck.  All rights strictly reserved.
@@ -27,54 +27,63 @@ class Feature
 
     /**
      * Text – set by default.
+     *
      * @var int
      */
     const FEAT_TEXT = 1;
 
     /**
      * 8-bit messaging – set by default.
+     *
      * @var int
      */
     const FEAT_8BIT = 2;
 
     /**
      * UDH (Binary) - set by default.
+     *
      * @var int
      */
     const FEAT_UDH = 4;
 
     /**
      * UCS2 / Unicode – set by default.
+     *
      * @var int
      */
     const FEAT_UCS2 = 8;
 
     /**
      * Alpha source address (from parameter).
+     *
      * @var int
      */
     const FEAT_ALPHA = 16;
 
     /**
      * Numeric source address (from parameter).
+     *
      * @var int
      */
     const FEAT_NUMBER = 32;
 
     /**
      * Flash messaging.
+     *
      * @var int
      */
     const FEAT_FLASH = 512;
 
     /**
      * Delivery acknowledgments.
+     *
      * @var int
      */
     const FEAT_DELIVACK = 8_192;
 
     /**
      * Concatenation – set by default.
+     *
      * @var int
      */
     const FEAT_CONCAT = 16_384;
