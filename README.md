@@ -1,6 +1,20 @@
 # php-sms
 
-SMS Wrappers for various service providers extracted from Hydra
+> HTTP Drivers around various SMS Wrappers for various service providers extracted from Hydra.
+
+---
+
+## Drivers
+
+ * Clickatell HTTP/S API
+
+---
+
+## Authors
+
+ * Jacques Marneweck <<jacques@siberia.co.za>>
+
+---
 
 ## License
 
