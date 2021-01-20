@@ -1,6 +1,6 @@
 <?php
 /**
- * PHP SMS
+ * PHP SMS.
  *
  * @author    Jacques Marneweck <jacques@siberia.co.za>
  * @copyright 2020 Jacques Marneweck.  All rights strictly reserved.
@@ -17,4 +17,3 @@ class Version
      */
     const VERSION = '0.0.1';
 }
-

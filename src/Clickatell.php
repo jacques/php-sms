@@ -1,6 +1,6 @@
 <?php
 /**
- * PHP SMS
+ * PHP SMS.
  *
  * @author    Jacques Marneweck <jacques@siberia.co.za>
  * @copyright 2020-2021 Jacques Marneweck.  All rights strictly reserved.
@@ -119,13 +119,13 @@ class Clickatell
      * Default options.
      */
     private array $options = [
-        'scheme' => 'https',
+        'scheme'   => 'https',
         'hostname' => 'api.clickatell.com',
-        'port'  => 443,
-        'debug' => false,
+        'port'     => 443,
+        'debug'    => false,
         'username' => null,
         'password' => null,
-        'api_id' => null,
+        'api_id'   => null,
     ];
 
     /**
@@ -202,7 +202,7 @@ class Clickatell
             'user'     => $this->options['username'],
             'password' => $this->options['password'],
             'api_id'   => $this->options['api_id'],
-        ] : [ 'session_id' => $this->session_id ];
+        ] : ['session_id' => $this->session_id];
     }
 
     /**
@@ -224,7 +224,7 @@ class Clickatell
     /**
      * Turn on or off Delivery Acknowledgements.
      *
-     * @param  bool $value
+     * @param bool $value
      *
      * @return void
      */
@@ -325,15 +325,15 @@ class Clickatell
                 'form_params' => \array_merge(
                     $this->getDefaultAuthParams(),
                     [
-                        'apimsgid' => \trim($apimsgid)
+                        'apimsgid' => \trim($apimsgid),
                     ]
-                )
+                ),
             ]
         );
 
         $body = (string) $response->getBody();
 
-        $delete_response = \preg_split("#[\\s:]+#", $body);
+        $delete_response = \preg_split('#[\\s:]+#', $body);
 
         if ($delete_response[2] == 'charge') {
             return [$delete_response[3], $delete_response[5]];
@@ -366,9 +366,9 @@ class Clickatell
                 'form_params' => \array_merge(
                     $this->getDefaultAuthParams(),
                     [
-                        'apimsgid' => \trim($apimsgid)
+                        'apimsgid' => \trim($apimsgid),
                     ]
-                )
+                ),
             ]
         );
 
@@ -379,8 +379,8 @@ class Clickatell
         if ($charge_response[2] == 'charge') {
             return [
                 'api_msg_id' => $charge_response['1'],
-                'charge' => $charge_response[3],
-                'status' => $charge_response[5],
+                'charge'     => $charge_response[3],
+                'status'     => $charge_response[5],
             ];
         } elseif ('ERR' === $charge_response['0']) {
             throw new \Exception($body);
@@ -413,6 +413,7 @@ class Clickatell
         $body = (string) $response->getBody();
 
         $session = \preg_split('#:#', $body);
+
         return 'OK' === $session['0'];
     }
 
@@ -467,7 +468,7 @@ class Clickatell
                 'form_params' => \array_merge(
                     $this->getDefaultAuthParams(),
                     [
-                        'msisdn' => $msisdn
+                        'msisdn' => $msisdn,
                     ]
                 ),
             ]
@@ -622,7 +623,7 @@ class Clickatell
                 'form_params' => \array_merge(
                     $this->getDefaultAuthParams(),
                     $params
-                )
+                ),
             ]
         );
 
@@ -660,7 +661,7 @@ class Clickatell
                     [
                         'token' => $token,
                     ]
-                )
+                ),
             ]
         );
 
