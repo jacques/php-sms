@@ -18,4 +18,4 @@
 
 ## License
 
-[BSD](LICENSE)
+[MIT](LICENSE)
