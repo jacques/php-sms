@@ -1,39 +1,36 @@
-<?php
+<?php declare(strict_types=1);
+/**
+ * @author Jacques Marneweck <jacques@siberia.co.za>
+ */
 
-declare(strict_types=1);
-
-use Rector\Core\Configuration\Option;
-use Rector\Php74\Rector\Property\TypedPropertyRector;
+use Rector\CodeQuality\Rector\Class_\InlineConstructorDefaultToPropertyRector;
+use Rector\Config\RectorConfig;
+use Rector\PHPUnit\Set\PHPUnitSetList;
+use Rector\Set\ValueObject\LevelSetList;
 use Rector\Set\ValueObject\SetList;
-use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
 
-return static function (ContainerConfigurator $containerConfigurator): void {
-    // get parameters
-    $parameters = $containerConfigurator->parameters();
-
-    // Define what rule sets will be applied
-    $parameters->set(Option::SETS, [
-        SetList::CODE_QUALITY,
-        SetList::CODE_QUALITY_STRICT,
-        SetList::CODING_STYLE,
-        //SetList::DEAD_CODE,
-        SetList::PERFORMANCE,
-        SetList::PHP_70,
-        SetList::PHP_71,
-        SetList::PHP_72,
-        SetList::PHP_73,
-        SetList::PHP_74,
-        SetList::PHPUNIT_70,
-        SetList::PHPUNIT_75,
-        SetList::PHPUNIT_80,
-        SetList::PHPUNIT_90,
-        SetList::PHPUNIT_91,
-        SetList::PHP_CODE_SNIFFER_30,
+return static function (RectorConfig $rectorConfig): void {
+    $rectorConfig->paths([
+        __DIR__ . '/src',
+        __DIR__ . '/tests',
     ]);
 
-    // get services (needed for register a single rule)
-    // $services = $containerConfigurator->services();
-
     // register a single rule
-    // $services->set(TypedPropertyRector::class);
+    $rectorConfig->rule(InlineConstructorDefaultToPropertyRector::class);
+
+    // define sets of rules
+    $rectorConfig->sets([
+        LevelSetList::UP_TO_PHP_80,
+        PHPUnitSetList::PHPUNIT_91,
+        PHPUnitSetList::PHPUNIT_CODE_QUALITY,
+        PHPUnitSetList::PHPUNIT_SPECIFIC_METHOD,
+        PHPUnitSetList::PHPUNIT_YIELD_DATA_PROVIDER,
+        SetList::CODE_QUALITY,
+        SetList::DEAD_CODE,
+        SetList::EARLY_RETURN,
+        SetList::PRIVATIZATION,
+        SetList::PSR_4,
+        SetList::TYPE_DECLARATION,
+        SetList::TYPE_DECLARATION_STRICT,
+    ]);
 };
