@@ -3,7 +3,7 @@
 declare(strict_types=1);
 /**
  * @author    Jacques Marneweck <jacques@siberia.co.za>
- * @copyright 2020 Jacques Marneweck.  All rights strictly reserved.
+ * @copyright 2020-2022 Jacques Marneweck.  All rights strictly reserved.
  */
 
 namespace Jacques\SMS\Tests\Integration;
@@ -192,6 +192,19 @@ class ClickatellTest extends TestCase
 
         self::expectException(\Exception::class);
         self::expectExceptionMessage('ERR: 001, Authentication failed');
+
+        self::assertEquals([false, false], $clickatell->send_message(['to' => '27801234567', 'message' => 'testing']));
+    }
+
+    /**
+     * @vcr clickatell/sendmsg__fails__007
+     */
+    public function testSendMessageFails007(): void
+    {
+        $clickatell = new Clickatell(['username' => 'test', 'password' => 'test', 'api_id' => 1]);
+
+        self::expectException(\Exception::class);
+        self::expectExceptionMessage('ERR: 007, IP Lockdown violation');
 
         self::assertEquals([false, false], $clickatell->send_message(['to' => '27801234567', 'message' => 'testing']));
     }
