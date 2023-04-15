@@ -31,6 +31,5 @@ return static function (RectorConfig $rectorConfig): void {
         SetList::PRIVATIZATION,
         SetList::PSR_4,
         SetList::TYPE_DECLARATION,
-        SetList::TYPE_DECLARATION_STRICT,
     ]);
 };
